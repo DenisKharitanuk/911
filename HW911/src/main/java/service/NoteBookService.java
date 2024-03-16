@@ -12,7 +12,7 @@ public interface NoteBookService {
 
     List<NoteBook> getAllNotes();
 
-    void deleteNote();
+    void removeNote();
 
     void saveNoteAsFile();
 

@@ -8,7 +8,7 @@ import java.util.List;
 @Data
 public class NoteBook {
 
-    private int idCounter = 0;
+    private static int idCounter = 0;
     private int id;
     @Getter
     private static List<NoteBook> noteList = new ArrayList<>();
@@ -26,4 +26,8 @@ public class NoteBook {
         return ++idCounter;
     }
 
+    @Override
+    public String toString() {
+        return String.format("{%d} # {%s}\n%s\n===================\n", this.getId(), this.getText(), this.getLabelsList());
+    }
 }
